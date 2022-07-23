@@ -15,6 +15,7 @@
         <ul>
           <% @lists.each do |list| %>
             <%= link_to list_path(list) do %>
+              <%= cl_image_tag list.photo.key  %>
               <li><%= list.name %></li>
             <% end %>
           <% end %>
@@ -27,8 +28,8 @@
 
 
 <%= cl_image_tag("https://res.cloudinary.com/dkkjud4mt/image/upload/v1658257965/zmrblludljflqvtfedmq.jpg",
-     width: 400, height: 300, crop: :fill) %>
+     width: 400, crop: :fill) %>
 
 <!-- for face detection -->
 <%= cl_image_tag("https://res.cloudinary.com/dkkjud4mt/image/upload/v1658257966/sorqj4fnjvyszyrgrp4l.jpg",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+      width: 150, crop: :thumb, gravity: :face) %>
